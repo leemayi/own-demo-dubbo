@@ -1,0 +1,839 @@
+31-Mar-2020 13:45:40.585 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.33
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Mar 11 2020 09:31:38 UTC
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(：9.0.33.0
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.14.2
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  x86_64
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              1.8.0_191-b12
+31-Mar-2020 13:45:40.590 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+31-Mar-2020 13:45:40.591 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:45:40.591 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:45:40.596 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/conf/logging.properties
+31-Mar-2020 13:45:40.596 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+31-Mar-2020 13:45:40.597 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baidu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+31-Mar-2020 13:45:41.012 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+31-Mar-2020 13:45:41.033 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1057)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:303)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Address already in use
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:433)
+		at sun.nio.ch.Net.bind(Net.java:425)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+		at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:229)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:212)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1154)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+		... 13 more
+31-Mar-2020 13:45:41.036 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[689]毫秒内初始化
+31-Mar-2020 13:45:41.071 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Mar-2020 13:45:41.071 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.33]
+31-Mar-2020 13:45:41.079 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/docs]
+31-Mar-2020 13:45:41.339 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/docs] has finished in [260] ms
+31-Mar-2020 13:45:41.342 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/manager]
+31-Mar-2020 13:45:41.374 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/manager] has finished in [34] ms
+31-Mar-2020 13:45:41.374 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/examples]
+31-Mar-2020 13:45:41.674 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/examples] has finished in [300] ms
+31-Mar-2020 13:45:41.674 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/ROOT]
+31-Mar-2020 13:45:41.691 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/ROOT] has finished in [17] ms
+31-Mar-2020 13:45:41.691 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/host-manager]
+31-Mar-2020 13:45:41.709 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/host-manager] has finished in [18] ms
+31-Mar-2020 13:45:41.712 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [675] milliseconds
+31-Mar-2020 13:46:42.350 信息 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+31-Mar-2020 13:46:42.350 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Mar-2020 13:46:42.351 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+31-Mar-2020 13:46:42.374 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+31-Mar-2020 13:46:42.375 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+31-Mar-2020 13:47:33.086 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.33
+31-Mar-2020 13:47:33.090 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Mar 11 2020 09:31:38 UTC
+31-Mar-2020 13:47:33.090 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(：9.0.33.0
+31-Mar-2020 13:47:33.090 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+31-Mar-2020 13:47:33.090 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.14.2
+31-Mar-2020 13:47:33.090 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  x86_64
+31-Mar-2020 13:47:33.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre
+31-Mar-2020 13:47:33.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              1.8.0_191-b12
+31-Mar-2020 13:47:33.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+31-Mar-2020 13:47:33.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:47:33.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:47:33.095 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/conf/logging.properties
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Mar-2020 13:47:33.096 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:47:33.097 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:47:33.097 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+31-Mar-2020 13:47:33.097 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baidu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+31-Mar-2020 13:47:33.441 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8180"]
+31-Mar-2020 13:47:33.502 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[656]毫秒内初始化
+31-Mar-2020 13:47:33.565 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Mar-2020 13:47:33.569 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.33]
+31-Mar-2020 13:47:33.582 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/docs]
+31-Mar-2020 13:47:33.858 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/docs] has finished in [275] ms
+31-Mar-2020 13:47:33.858 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/manager]
+31-Mar-2020 13:47:33.896 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/manager] has finished in [38] ms
+31-Mar-2020 13:47:33.896 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/examples]
+31-Mar-2020 13:47:34.197 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/examples] has finished in [301] ms
+31-Mar-2020 13:47:34.197 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/ROOT]
+31-Mar-2020 13:47:34.210 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/ROOT] has finished in [13] ms
+31-Mar-2020 13:47:34.211 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/host-manager]
+31-Mar-2020 13:47:34.229 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/host-manager] has finished in [18] ms
+31-Mar-2020 13:47:34.233 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8180"]
+31-Mar-2020 13:47:34.242 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [740] milliseconds
+31-Mar-2020 13:48:23.150 信息 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+31-Mar-2020 13:48:23.151 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8180"]
+31-Mar-2020 13:48:23.162 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+31-Mar-2020 13:48:23.192 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8180"]
+31-Mar-2020 13:48:23.196 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8180"]
+31-Mar-2020 13:48:35.887 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.33
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Mar 11 2020 09:31:38 UTC
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(：9.0.33.0
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.14.2
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  x86_64
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              1.8.0_191-b12
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:48:35.891 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/conf/logging.properties
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:48:35.897 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:48:35.898 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+31-Mar-2020 13:48:35.898 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baidu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+31-Mar-2020 13:48:36.289 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8180"]
+31-Mar-2020 13:48:36.342 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[646]毫秒内初始化
+31-Mar-2020 13:48:36.375 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Mar-2020 13:48:36.375 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.33]
+31-Mar-2020 13:48:36.387 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8180"]
+31-Mar-2020 13:48:36.396 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [53] milliseconds
+31-Mar-2020 13:49:36.418 信息 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0.war]
+31-Mar-2020 13:49:41.661 信息 [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+INFO: configuring "log4j" using file:/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0/WEB-INF/log4j.xml
+ - with property localAddress = 127.0.0.1
+ - with property localHost = localhost
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /Users/baidu/logs
+
+ INFO context.ContextLoader - Root WebApplicationContext: initialization started
+ INFO context.WebxComponentsContext - Refreshing Root WebApplicationContext: startup date [Tue Mar 31 13:49:41 CST 2020]; root of context hierarchy
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/webx.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/webx-component-and-root.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/pipeline-exception.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/resources.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/uris.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/rewrite.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-admin.xml]
+ INFO logger.LoggerFactory - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from Resource[/WEB-INF/dubbo.properties, loaded by ResourceLoadingService]
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from URL [file:/Users/baidu/dubbo.properties]
+ WARN config.PropertyPlaceholderConfigurer - Could not load properties from URL [file:/Users/baidu/dubbo.properties]: /Users/baidu/dubbo.properties (No such file or directory)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO upload.UploadService - Upload Parameters: {
+  Repository Path                  = /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+  Maximum Request Size             = 5M
+  Maximum File Size                = n/a
+  Threshold before Writing to File = 10K
+  Keep Form Field in Memory        = false
+  File Name Key                    = [
+                                       [1/1] filename
+                                     ]
+}
+ INFO context.WebxComponentsContext - Bean '(inner bean)#61af1275' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'dubbo-admin' of type [class com.alibaba.dubbo.config.ApplicationConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'com.alibaba.dubbo.config.RegistryConfig' of type [class com.alibaba.dubbo.config.RegistryConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'registryService' of type [class com.alibaba.dubbo.config.spring.ReferenceBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean '(inner bean)#61af1275' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,exceptionPipeline,resourceLoadingService,messageSource,uriBrokerService,restfulRewrite,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dubbo-admin,com.alibaba.dubbo.config.RegistryConfig,registryService,configService,consumerService,overrideService,ownerService,providerService,routeService,userService,governanceCache,productionModeSensiblePostProcessor,webxConfiguration,requestContexts,com.alibaba.citrus.service.requestcontext.impl.RequestContextBeanFactoryPostProcessor#0,uploadService,pullService,formService,module.screen.ErrorOther,module.screen.Error404,moduleLoaderService,messageResourceService,com.alibaba.citrus.webx.context.WebxComponentsLoader$WebxComponentsCreator,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/common/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO concurrent.ExecutionList -  [DUBBO] Executor for listenablefuture is null, will use default executor!, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zkclient.ZkEventThread - Starting ZkClient event thread.
+ INFO zkclient.ZkClient - zookeeper state changed (SyncConnected)
+ INFO config.AbstractConfig -  [DUBBO] Refer dubbo service com.alibaba.dubbo.registry.RegistryService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.6.0&file=false&pid=7442&refer=application%3Ddubbo-admin%26check%3Dfalse%26dubbo%3D2.6.0%26interface%3Dcom.alibaba.dubbo.registry.RegistryService%26methods%3Dlookup%2Csubscribe%2Cunsubscribe%2Cunregister%2Cregister%26pid%3D7442%26register.ip%3D192.168.237.54%26revision%3D2.6.0%26side%3Dconsumer%26timestamp%3D1585633786320&timestamp=1585633786355, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO sync.RegistryServerSync -  [DUBBO] Init Dubbo Admin Sync Cache..., dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=*&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [dubbo://192.168.237.54:20880/com.dubbo.api.service.DemoService?anyhost=true&application=demo-provider&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6757&side=provider&timestamp=1585631878426, consumer://192.168.237.54/com.dubbo.api.service.DemoService?application=demo-consumer&category=consumers&check=false&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6892&side=consumer&timestamp=1585632666088, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=routers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService] with 16 pre-pulled tools, 10 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysmanage
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysmanage': startup date [Tue Mar 31 13:49:46 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysmanage.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#cee9d59' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#56e4657a' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#cee9d59' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@146cb57a: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Userown,module.screen.Configs,module.screen.Privileges,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysmanage/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.1] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysinfo
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysinfo': startup date [Tue Mar 31 13:49:47 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysinfo.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#23f61808' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#30275a8c' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#23f61808' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@49177b5b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Statuses,module.screen.Versions,module.screen.Envs,module.screen.Logs,module.screen.Dump,module.screen.Dumps,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysinfo/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.2] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: personal
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'personal': startup date [Tue Mar 31 13:49:48 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-personal.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#2b1ac127' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#15d804b4' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2b1ac127' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@746400fb: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Passwds,module.screen.Infos,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/personal/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.3] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: governance
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'governance': startup date [Tue Mar 31 13:49:49 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-governance.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#2a9b12db' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#7b29d783' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2a9b12db' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@30270633: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,pullService,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService#0,pipeline,module.screen.Services,module.screen.Consumers,module.screen.NoServicePrivilege,module.screen.Loadbalances,module.screen.Accesses,module.screen.Addresses,module.screen.Owners,module.screen.Providers,module.screen.Weights,module.screen.Overrides,module.screen.Routes,module.screen.Applications,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.4] with 1 pre-pulled tools, 2 pre-queued tools and 0 runtime tools
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/governance/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService#0.5] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: home
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'home': startup date [Tue Mar 31 13:49:50 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-home.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#7fefe68c' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#28cb42c3' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#7fefe68c' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@13104c03: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Reg,module.screen.Unregister,module.screen.Index,module.screen.Disable,module.screen.Register,module.screen.Result,module.screen.Lookup,module.screen.Unregisterall,module.screen.Servicestatus,module.screen.Status,module.screen.Unreg,module.control.Menu,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/home/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.6] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - WebxComponents: initialization completed
+ INFO context.ContextLoader - Root WebApplicationContext: initialization completed in 9115 ms
+ INFO servlet.WebxFrameworkFilter - Initializing filter: webx
+ INFO servlet.WebxFrameworkFilter - WebxFrameworkFilter - webx: initialization completed
+ INFO servlet.SetLoggingContextFilter - Initializing filter: mdc
+ INFO servlet.SetLoggingContextFilter - SetLoggingContextFilter - mdc: initialization completed
+31-Mar-2020 13:49:50.971 信息 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0.war] has finished in [14,553] ms
+31-Mar-2020 13:49:51.704 信息 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+31-Mar-2020 13:49:51.704 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8180"]
+31-Mar-2020 13:49:51.713 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+ INFO context.WebxComponentsContext - Closing Root WebApplicationContext: startup date [Tue Mar 31 13:49:41 CST 2020]; root of context hierarchy
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,exceptionPipeline,resourceLoadingService,messageSource,uriBrokerService,restfulRewrite,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dubbo-admin,com.alibaba.dubbo.config.RegistryConfig,registryService,configService,consumerService,overrideService,ownerService,providerService,routeService,userService,governanceCache,productionModeSensiblePostProcessor,webxConfiguration,requestContexts,com.alibaba.citrus.service.requestcontext.impl.RequestContextBeanFactoryPostProcessor#0,uploadService,pullService,formService,module.screen.ErrorOther,module.screen.Error404,moduleLoaderService,messageResourceService,com.alibaba.citrus.webx.context.WebxComponentsLoader$WebxComponentsCreator,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Unsubscribe: admin://192.168.237.54?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=*&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO context.WebxComponentContext - Closing WebApplicationContext for namespace 'sysmanage': startup date [Tue Mar 31 13:49:46 CST 2020]; parent: Root WebApplicationContext
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@146cb57a: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Userown,module.screen.Configs,module.screen.Privileges,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO context.WebxComponentContext - Closing WebApplicationContext for namespace 'governance': startup date [Tue Mar 31 13:49:49 CST 2020]; parent: Root WebApplicationContext
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@30270633: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,pullService,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService#0,pipeline,module.screen.Services,module.screen.Consumers,module.screen.NoServicePrivilege,module.screen.Loadbalances,module.screen.Accesses,module.screen.Addresses,module.screen.Owners,module.screen.Providers,module.screen.Weights,module.screen.Overrides,module.screen.Routes,module.screen.Applications,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO context.WebxComponentContext - Closing WebApplicationContext for namespace 'home': startup date [Tue Mar 31 13:49:50 CST 2020]; parent: Root WebApplicationContext
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@13104c03: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Reg,module.screen.Unregister,module.screen.Index,module.screen.Disable,module.screen.Register,module.screen.Result,module.screen.Lookup,module.screen.Unregisterall,module.screen.Servicestatus,module.screen.Status,module.screen.Unreg,module.control.Menu,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO context.WebxComponentContext - Closing WebApplicationContext for namespace 'sysinfo': startup date [Tue Mar 31 13:49:47 CST 2020]; parent: Root WebApplicationContext
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@49177b5b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Statuses,module.screen.Versions,module.screen.Envs,module.screen.Logs,module.screen.Dump,module.screen.Dumps,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+ INFO context.WebxComponentContext - Closing WebApplicationContext for namespace 'personal': startup date [Tue Mar 31 13:49:48 CST 2020]; parent: Root WebApplicationContext
+ INFO context.InheritableListableBeanFactory - Destroying singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@746400fb: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Passwds,module.screen.Infos,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@436b79ef
+31-Mar-2020 13:49:51.769 警告 [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[dubbo-admin-2.6.0]似乎启动了一个名为[DubboRegistryFailedRetryTimer-thread-1]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)]
+31-Mar-2020 13:49:51.773 警告 [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[dubbo-admin-2.6.0]似乎启动了一个名为[ZkClient-EventThread-33-127.0.0.1:2181]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:67)]
+31-Mar-2020 13:49:51.773 警告 [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[dubbo-admin-2.6.0]似乎启动了一个名为[DubboZkclientConnector-SendThread(127.0.0.1:2181)]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+ sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+ sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:349)
+ org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)]
+31-Mar-2020 13:49:51.774 警告 [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[dubbo-admin-2.6.0]似乎启动了一个名为[DubboZkclientConnector-EventThread]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:501)]
+31-Mar-2020 13:49:51.774 警告 [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads Web应用程序[dubbo-admin-2.6.0]似乎启动了一个名为[DubboFutureCallbackDefault-thread-1]的线程，但未能停止它。这很可能会造成内存泄漏。线程的堆栈跟踪：[
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)]
+31-Mar-2020 13:49:51.779 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8180"]
+31-Mar-2020 13:49:51.782 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8180"]
+ INFO config.AbstractConfig -  [DUBBO] Run shutdown hook now., dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO support.AbstractRegistryFactory -  [DUBBO] Close all registries [zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.6.0&file=false&interface=com.alibaba.dubbo.registry.RegistryService&pid=7442&timestamp=1585633786355], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Destroy registry:zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.6.0&file=false&interface=com.alibaba.dubbo.registry.RegistryService&pid=7442&timestamp=1585633786355, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Destroy unsubscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zkclient.ZkEventThread - Terminate ZkClient event thread.
+31-Mar-2020 13:50:07.870 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.33
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Mar 11 2020 09:31:38 UTC
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(：9.0.33.0
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.14.2
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  x86_64
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre
+31-Mar-2020 13:50:07.874 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              1.8.0_191-b12
+31-Mar-2020 13:50:07.875 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+31-Mar-2020 13:50:07.875 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:50:07.875 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:50:07.880 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/conf/logging.properties
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+31-Mar-2020 13:50:07.881 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baidu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+31-Mar-2020 13:50:08.165 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8180"]
+31-Mar-2020 13:50:08.205 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[517]毫秒内初始化
+31-Mar-2020 13:50:08.226 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Mar-2020 13:50:08.226 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.33]
+31-Mar-2020 13:50:08.241 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin.war]
+31-Mar-2020 13:50:13.928 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+INFO: configuring "log4j" using file:/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin/WEB-INF/log4j.xml
+ - with property localAddress = 127.0.0.1
+ - with property localHost = localhost
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /Users/baidu/logs
+
+ INFO context.ContextLoader - Root WebApplicationContext: initialization started
+ INFO context.WebxComponentsContext - Refreshing Root WebApplicationContext: startup date [Tue Mar 31 13:50:14 CST 2020]; root of context hierarchy
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/webx.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/webx-component-and-root.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/pipeline-exception.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/resources.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/uris.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/rewrite.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-admin.xml]
+ INFO logger.LoggerFactory - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from Resource[/WEB-INF/dubbo.properties, loaded by ResourceLoadingService]
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from URL [file:/Users/baidu/dubbo.properties]
+ WARN config.PropertyPlaceholderConfigurer - Could not load properties from URL [file:/Users/baidu/dubbo.properties]: /Users/baidu/dubbo.properties (No such file or directory)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO upload.UploadService - Upload Parameters: {
+  Repository Path                  = /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+  Maximum Request Size             = 5M
+  Maximum File Size                = n/a
+  Threshold before Writing to File = 10K
+  Keep Form Field in Memory        = false
+  File Name Key                    = [
+                                       [1/1] filename
+                                     ]
+}
+ INFO context.WebxComponentsContext - Bean '(inner bean)#2ba70002' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'dubbo-admin' of type [class com.alibaba.dubbo.config.ApplicationConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'com.alibaba.dubbo.config.RegistryConfig' of type [class com.alibaba.dubbo.config.RegistryConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'registryService' of type [class com.alibaba.dubbo.config.spring.ReferenceBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean '(inner bean)#2ba70002' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,exceptionPipeline,resourceLoadingService,messageSource,uriBrokerService,restfulRewrite,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dubbo-admin,com.alibaba.dubbo.config.RegistryConfig,registryService,configService,consumerService,overrideService,ownerService,providerService,routeService,userService,governanceCache,productionModeSensiblePostProcessor,webxConfiguration,requestContexts,com.alibaba.citrus.service.requestcontext.impl.RequestContextBeanFactoryPostProcessor#0,uploadService,pullService,formService,module.screen.ErrorOther,module.screen.Error404,moduleLoaderService,messageResourceService,com.alibaba.citrus.webx.context.WebxComponentsLoader$WebxComponentsCreator,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/common/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO concurrent.ExecutionList -  [DUBBO] Executor for listenablefuture is null, will use default executor!, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zkclient.ZkEventThread - Starting ZkClient event thread.
+ INFO zkclient.ZkClient - zookeeper state changed (SyncConnected)
+ INFO config.AbstractConfig -  [DUBBO] Refer dubbo service com.alibaba.dubbo.registry.RegistryService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.6.0&file=false&pid=7559&refer=application%3Ddubbo-admin%26check%3Dfalse%26dubbo%3D2.6.0%26interface%3Dcom.alibaba.dubbo.registry.RegistryService%26methods%3Dlookup%2Cunsubscribe%2Csubscribe%2Cunregister%2Cregister%26pid%3D7559%26register.ip%3D192.168.237.54%26revision%3D2.6.0%26side%3Dconsumer%26timestamp%3D1585633818569&timestamp=1585633818611, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO sync.RegistryServerSync -  [DUBBO] Init Dubbo Admin Sync Cache..., dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=*&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [dubbo://192.168.237.54:20880/com.dubbo.api.service.DemoService?anyhost=true&application=demo-provider&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6757&side=provider&timestamp=1585631878426, consumer://192.168.237.54/com.dubbo.api.service.DemoService?application=demo-consumer&category=consumers&check=false&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6892&side=consumer&timestamp=1585632666088, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=routers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService] with 16 pre-pulled tools, 10 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysmanage
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysmanage': startup date [Tue Mar 31 13:50:19 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysmanage.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#7ff2ad88' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#54733b9c' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#7ff2ad88' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@454e8cba: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Userown,module.screen.Configs,module.screen.Privileges,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysmanage/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.1] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysinfo
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysinfo': startup date [Tue Mar 31 13:50:20 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysinfo.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#63157033' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#a442038' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#63157033' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@48c865c1: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Statuses,module.screen.Versions,module.screen.Envs,module.screen.Logs,module.screen.Dump,module.screen.Dumps,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysinfo/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.2] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: personal
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'personal': startup date [Tue Mar 31 13:50:22 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-personal.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#1045c79e' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#7ffc28de' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#1045c79e' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@41a42c6b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Passwds,module.screen.Infos,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/personal/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.3] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: governance
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'governance': startup date [Tue Mar 31 13:50:23 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-governance.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#29d2aeb7' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#918ca32' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#29d2aeb7' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@73b2e74a: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,pullService,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService#0,pipeline,module.screen.Services,module.screen.Consumers,module.screen.NoServicePrivilege,module.screen.Loadbalances,module.screen.Accesses,module.screen.Addresses,module.screen.Owners,module.screen.Providers,module.screen.Weights,module.screen.Overrides,module.screen.Routes,module.screen.Applications,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.4] with 1 pre-pulled tools, 2 pre-queued tools and 0 runtime tools
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/governance/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService#0.5] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: home
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'home': startup date [Tue Mar 31 13:50:24 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-home.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#754326ca' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#1fb31dfb' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#754326ca' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@1496a4ca: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Reg,module.screen.Unregister,module.screen.Index,module.screen.Disable,module.screen.Register,module.screen.Result,module.screen.Lookup,module.screen.Unregisterall,module.screen.Servicestatus,module.screen.Status,module.screen.Unreg,module.control.Menu,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4e6fb132
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/home/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.6] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - WebxComponents: initialization completed
+ INFO context.ContextLoader - Root WebApplicationContext: initialization completed in 10808 ms
+ INFO servlet.WebxFrameworkFilter - Initializing filter: webx
+ INFO servlet.WebxFrameworkFilter - WebxFrameworkFilter - webx: initialization completed
+ INFO servlet.SetLoggingContextFilter - Initializing filter: mdc
+ INFO servlet.SetLoggingContextFilter - SetLoggingContextFilter - mdc: initialization completed
+31-Mar-2020 13:50:24.948 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin.war] has finished in [16,707] ms
+31-Mar-2020 13:50:24.949 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0]
+31-Mar-2020 13:50:31.191 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+INFO: configuring "log4j" using file:/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0/WEB-INF/log4j.xml
+ - with property localAddress = 127.0.0.1
+ - with property localHost = localhost
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /Users/baidu/logs
+
+ INFO context.ContextLoader - Root WebApplicationContext: initialization started
+ INFO context.WebxComponentsContext - Refreshing Root WebApplicationContext: startup date [Tue Mar 31 13:50:31 CST 2020]; root of context hierarchy
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/webx.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/webx-component-and-root.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/pipeline-exception.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/resources.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/uris.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/rewrite.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-admin.xml]
+ INFO logger.LoggerFactory - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from Resource[/WEB-INF/dubbo.properties, loaded by ResourceLoadingService]
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from URL [file:/Users/baidu/dubbo.properties]
+ WARN config.PropertyPlaceholderConfigurer - Could not load properties from URL [file:/Users/baidu/dubbo.properties]: /Users/baidu/dubbo.properties (No such file or directory)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO upload.UploadService - Upload Parameters: {
+  Repository Path                  = /Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/temp
+  Maximum Request Size             = 5M
+  Maximum File Size                = n/a
+  Threshold before Writing to File = 10K
+  Keep Form Field in Memory        = false
+  File Name Key                    = [
+                                       [1/1] filename
+                                     ]
+}
+ INFO context.WebxComponentsContext - Bean '(inner bean)#397fcbd1' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'dubbo-admin' of type [class com.alibaba.dubbo.config.ApplicationConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'com.alibaba.dubbo.config.RegistryConfig' of type [class com.alibaba.dubbo.config.RegistryConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'registryService' of type [class com.alibaba.dubbo.config.spring.ReferenceBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean '(inner bean)#397fcbd1' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,exceptionPipeline,resourceLoadingService,messageSource,uriBrokerService,restfulRewrite,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dubbo-admin,com.alibaba.dubbo.config.RegistryConfig,registryService,configService,consumerService,overrideService,ownerService,providerService,routeService,userService,governanceCache,productionModeSensiblePostProcessor,webxConfiguration,requestContexts,com.alibaba.citrus.service.requestcontext.impl.RequestContextBeanFactoryPostProcessor#0,uploadService,pullService,formService,module.screen.ErrorOther,module.screen.Error404,moduleLoaderService,messageResourceService,com.alibaba.citrus.webx.context.WebxComponentsLoader$WebxComponentsCreator,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/common/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO concurrent.ExecutionList -  [DUBBO] Executor for listenablefuture is null, will use default executor!, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zkclient.ZkEventThread - Starting ZkClient event thread.
+ INFO zkclient.ZkClient - zookeeper state changed (SyncConnected)
+ INFO config.AbstractConfig -  [DUBBO] Refer dubbo service com.alibaba.dubbo.registry.RegistryService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.6.0&file=false&pid=7559&refer=application%3Ddubbo-admin%26check%3Dfalse%26dubbo%3D2.6.0%26interface%3Dcom.alibaba.dubbo.registry.RegistryService%26methods%3Dlookup%2Cunsubscribe%2Csubscribe%2Cunregister%2Cregister%26pid%3D7559%26register.ip%3D192.168.237.54%26revision%3D2.6.0%26side%3Dconsumer%26timestamp%3D1585633836968&timestamp=1585633837012, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO sync.RegistryServerSync -  [DUBBO] Init Dubbo Admin Sync Cache..., dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=*&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [dubbo://192.168.237.54:20880/com.dubbo.api.service.DemoService?anyhost=true&application=demo-provider&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6757&side=provider&timestamp=1585631878426, consumer://192.168.237.54/com.dubbo.api.service.DemoService?application=demo-consumer&category=consumers&check=false&dubbo=2.5.3&interface=com.dubbo.api.service.DemoService&methods=sayHello&organization=dubbox&owner=wly&pid=6892&side=consumer&timestamp=1585632666088, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=routers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, empty://192.168.237.54/com.dubbo.api.service.DemoService?category=configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService] with 16 pre-pulled tools, 10 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysmanage
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysmanage': startup date [Tue Mar 31 13:50:37 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysmanage.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#2e8ae93c' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#6d95f99e' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2e8ae93c' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@595321de: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Userown,module.screen.Configs,module.screen.Privileges,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysmanage/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.1] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysinfo
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysinfo': startup date [Tue Mar 31 13:50:39 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysinfo.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#9835575' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2c237060' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#9835575' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@13cba2b3: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Statuses,module.screen.Versions,module.screen.Envs,module.screen.Logs,module.screen.Dump,module.screen.Dumps,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysinfo/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.2] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: personal
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'personal': startup date [Tue Mar 31 13:50:40 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-personal.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#c9309a3' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#7bb8143f' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#c9309a3' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@14c61602: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Passwds,module.screen.Infos,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/personal/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.3] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: governance
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'governance': startup date [Tue Mar 31 13:50:41 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-governance.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#a4e0b08' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#3d914cb2' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#a4e0b08' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@23d84cd4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,pullService,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService#0,pipeline,module.screen.Services,module.screen.Consumers,module.screen.NoServicePrivilege,module.screen.Loadbalances,module.screen.Accesses,module.screen.Addresses,module.screen.Owners,module.screen.Providers,module.screen.Weights,module.screen.Overrides,module.screen.Routes,module.screen.Applications,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.4] with 1 pre-pulled tools, 2 pre-queued tools and 0 runtime tools
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/governance/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService#0.5] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: home
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'home': startup date [Tue Mar 31 13:50:42 CST 2020]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-home.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#2a5e13ff' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#b63da34' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2a5e13ff' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@67881cd2: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Reg,module.screen.Unregister,module.screen.Index,module.screen.Disable,module.screen.Register,module.screen.Result,module.screen.Lookup,module.screen.Unregisterall,module.screen.Servicestatus,module.screen.Status,module.screen.Unreg,module.control.Menu,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@63a8b59e
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/home/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.6] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - WebxComponents: initialization completed
+ INFO context.ContextLoader - Root WebApplicationContext: initialization completed in 11513 ms
+ INFO servlet.WebxFrameworkFilter - Initializing filter: webx
+ INFO servlet.WebxFrameworkFilter - WebxFrameworkFilter - webx: initialization completed
+ INFO servlet.SetLoggingContextFilter - Initializing filter: mdc
+ INFO servlet.SetLoggingContextFilter - SetLoggingContextFilter - mdc: initialization completed
+31-Mar-2020 13:50:42.980 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/baidu/Workspace/tomcat/apache-tomcat-9.0.33/webapps/dubbo-admin-2.6.0] has finished in [18,030] ms
+31-Mar-2020 13:50:42.991 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8180"]
+31-Mar-2020 13:50:43.021 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [34,815] milliseconds
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services to uri governance/services.htm?{_type=services, _path=governance/services}, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications to uri governance/applications.htm?{_type=applications, _path=governance/applications}, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demo-consumer/services to uri governance/services.htm?{_type=services, _path=governance/applications/demo-consumer/services, applications=demo-consumer}, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demo-consumer/services, dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [empty://192.168.237.54/com.dubbo.api.service.DemoService?category=providers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [empty://192.168.237.54/com.dubbo.api.service.DemoService?category=providers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [empty://192.168.237.54/com.dubbo.api.service.DemoService?category=consumers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.237.54/com.dubbo.api.service.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*, urls: [empty://192.168.237.54/com.dubbo.api.service.DemoService?category=consumers&check=false&classifier=*&enabled=*&group=*&interface=com.dubbo.api.service.DemoService&version=*], dubbo version: 2.6.0, current host: 192.168.237.54
